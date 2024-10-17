@@ -1,33 +1,42 @@
-const { ethers } = require("hardhat");
-require('dotenv').config();
+const hre = require("hardhat");
 
 async function main() {
-    const [deployer] = await ethers.getSigners();
-    
-    console.log("Deploying contracts with the account:", deployer.address);
+  // Get contract factory instances
+  const NFTCharacter = await hre.ethers.getContractFactory("NFTCharacter");
+  const GameEngine = await hre.ethers.getContractFactory("GameEngine");
+  const Marketplace = await hre.ethers.getContractFactory("Marketplace");
+  const MultichainBridge = await hre.ethers.getContractFactory("MultichainBridge");
+  const ReputationSystem = await hre.ethers.getContractFactory("ReputationSystem");
 
-    // Deploy DIDRegistry contract
-    const DIDRegistry = await ethers.getContractFactory("DIDRegistry");
-    const didRegistry = await DIDRegistry.deploy();
-    await didRegistry.waitForDeployment(); // Updated for ethers v6
-    console.log("DIDRegistry deployed to:", await didRegistry.getAddress()); // Updated for ethers v6
+  // Deploy NFTCharacter contract
+  const nftCharacter = await NFTCharacter.deploy();
+  await nftCharacter.waitForDeployment();
+  console.log("NFTCharacter deployed to:", await nftCharacter.getAddress());
 
-    // Deploy CredentialNFT contract
-    const CredentialNFT = await ethers.getContractFactory("CredentialNFT");
-    const credentialNFT = await CredentialNFT.deploy();
-    await credentialNFT.waitForDeployment(); // Updated for ethers v6
-    console.log("CredentialNFT deployed to:", await credentialNFT.getAddress()); // Updated for ethers v6
+  // Deploy GameEngine contract
+  const gameEngine = await GameEngine.deploy(nftCharacter.address);
+  await gameEngine.waitForDeployment();
+  console.log("GameEngine deployed to:", await gameEngine.getAddress());
 
-    // Deploy VerificationOracle contract
-    const VerificationOracle = await ethers.getContractFactory("VerificationOracle");
-    const ccipRouter = process.env.CCIP_ROUTER_ADDRESS; // Set this in your .env file
-    const linkToken = process.env.LINK_TOKEN_ADDRESS; // Set this in your .env file
-    const verificationOracle = await VerificationOracle.deploy(ccipRouter, linkToken);
-    await verificationOracle.waitForDeployment(); // Updated for ethers v6
-    console.log("VerificationOracle deployed to:", await verificationOracle.getAddress()); // Updated for ethers v6
+  // Deploy Marketplace contract
+  const marketplace = await Marketplace.deploy(nftCharacter.address);
+  await marketplace.waitForDeployment();
+  console.log("Marketplace deployed to:", await marketplace.getAddress());
+
+  // Deploy MultichainBridge contract
+  const multichainBridge = await MultichainBridge.deploy(nftCharacter.address);
+  await multichainBridge.waitForDeployment();
+  console.log("MultichainBridge deployed to:", await multichainBridge.getAddress());
+
+  // Deploy ReputationSystem contract
+  const reputationSystem = await ReputationSystem.deploy();
+  await reputationSystem.waitForDeployment();
+  console.log("ReputationSystem deployed to:", await reputationSystem.getAddress());
 }
 
-main().catch((error) => {
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
     console.error(error);
-    process.exitCode = 1;
-});
+    process.exit(1);
+  });
