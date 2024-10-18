@@ -20,27 +20,27 @@ This project is a decentralized gaming platform where users can mint and own NFT
 
  ## 2.  Contracts
 
-### 1. `NFTCharacter.sol`
+1. ###  `NFTCharacter.sol`
 Manages the minting of NFT characters and their traits:
 - **Mint Character**: Users can mint new characters with default traits.
 - **Update Traits**: Character traits can be updated by the owner.
 - **Character Traits**: Each character has traits like strength, agility, intelligence, and endurance.
 
-### 2. `GameEngine.sol`
+2. ###  `GameEngine.sol`
 Handles the core gameplay mechanics:
 - **Battle Simulation**: Simulates a battle between two characters, determining the winner based on their traits and awarding experience points.
 - **Power Calculation**: Provides a method to calculate the total power of a character based on its traits.
 
-### 3. `Marketplace.sol`
+3. ###  `Marketplace.sol`
 Facilitates the buying and selling of NFT characters:
 - **List NFT**: Users can list their characters for sale on the marketplace.
 - **Buy NFT**: Other users can purchase listed characters by paying the specified price.
 
-### 4. `MultichainBridge.sol`
+4. ###  `MultichainBridge.sol`
 Allows NFT characters to be transferred across different blockchains:
 - **Bridge NFT**: Locks or burns the NFT on the current chain and emits an event to facilitate the minting of the NFT on another chain.
 
-### 5. `ReputationSystem.sol`
+5. ###  `ReputationSystem.sol`
 Tracks the reputation of players based on their actions:
 - **Record Action**: Allows positive or negative actions to be recorded, which affects the player's reputation score.
 - **Get Reputation**: Returns the current reputation score of a player.
