@@ -45,7 +45,7 @@ Tracks the reputation of players based on their actions:
 - **Record Action**: Allows positive or negative actions to be recorded, which affects the player's reputation score.
 - **Get Reputation**: Returns the current reputation score of a player.
 
-3. ## Setup and Deployment
+ ## 3. Setup and Deployment
 
 ### Prerequisites
 
@@ -155,7 +155,7 @@ npx hardhat test
 
   9 passing (2s)
 
-License
+  # 5. License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 
