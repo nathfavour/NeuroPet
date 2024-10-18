@@ -13,11 +13,12 @@
 5. [License](#license)
 
 
-1. ## Overview
+
+ ## 1.  Overview
 
 This project is a decentralized gaming platform where users can mint and own NFT characters, engage in battles, and trade characters on a marketplace. Additionally, the platform offers cross-chain NFT support via a multichain bridge and tracks player reputation using an integrated reputation system.
 
-2. ## Contracts
+ ## 2.  Contracts
 
 ### 1. `NFTCharacter.sol`
 Manages the minting of NFT characters and their traits:
