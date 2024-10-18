@@ -33,8 +33,6 @@ describe("GameEngine", function () {
     
     // Wait for the transaction to be mined
     const receipt = await tx.wait();
-    
-    console.log("Transaction receipt:", JSON.stringify(receipt, null, 2));
 
     // Check if there are any events emitted
     if (receipt.logs && receipt.logs.length > 0) {

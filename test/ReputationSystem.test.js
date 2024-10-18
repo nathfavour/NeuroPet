@@ -10,7 +10,6 @@ describe("ReputationSystem", function () {
     [owner, addr1] = await ethers.getSigners();
     ReputationSystem = await ethers.getContractFactory("ReputationSystem");
     reputationSystem = await ReputationSystem.deploy();
-    // Remove the .deployed() call here
   });
 
   it("Should record positive and negative actions", async function () {
