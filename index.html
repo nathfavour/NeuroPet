@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/"/>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto);
+      html, body {
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+      h1 {
+        font-size: 4rem;
+        margin: unset;
+      }
+    </style>
+    <link href="manifest.json" rel="manifest"/>
+    <script async src="flutter_bootstrap.js"></script>
+    <!--$-->
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--/-->
+    <style>
+      header {
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+      }
+      header nav {
+        background-color: #01589B;
+        height: 3em;
+        border-radius: 10px;
+        overflow: clip;
+        display: flex;
+        justify-content: space-between;
+      }
+      header nav a {
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        padding-left: 2em;
+        padding-right: 2em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      header nav a:hover {
+        background-color: #0005;
+      }
+      header nav div.active {
+        position: relative;
+      }
+      header nav div.active::before {
+        content: "";
+        display: block;
+        height: 2px;
+        border-radius: 1px;
+        position: absolute;
+        left: 20px;
+        bottom: 0.5em;
+        right: 20px;
+        background-color: white;
+      }
+      ol {
+        max-width: 500px;
+      }
+      .main {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .main section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <html>
+        <head>
+          <meta charset="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <title>Gaming Dashboard</title>
+          <script src="https://cdn.tailwindcss.com"></script>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+          <style>
+                      body {
+                        font-family: &#39;Inter&#39;, sans-serif;
+                        background: radial-gradient(circle, rgba(45, 27, 46, 1) 0%, rgba(58, 31, 63, 1) 100%);
+                        color: #FFFFFF;
+                        backdrop-filter: blur(10px);
+                        transition: background 5s ease;
+                        margin: 0 auth;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100vh;
+                        text-align: center;
+                      }
+                      
+                      .container {
+                        max-width: 1200px;
+                        width: 100%;
+                        padding: 20px;
+                        box-sizing: border-box;
+                      }
+            
+                      .sidebar, .card, .header, .play-button {
+                        background: rgba(74, 42, 74, 0.8);
+                        backdrop-filter: blur(10px);
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                      }
+                      
+                      .highlight {
+                        background: linear-gradient(135deg, #E5A663 0%, #D4945A 100%);
+                      }
+                      
+                      .button {
+                        background: linear-gradient(135deg, #E5A663 0%, #D4945A 100%);
+                        color: #2D1B2E;
+                      }
+                      
+                      .button:hover {
+                        background: linear-gradient(135deg, #D4945A 0%, #C3834F 100%);
+                      }
+                      
+                      .play-button {
+                        font-size: 2rem;
+                        padding: 1rem 2rem;
+                        border-radius: 9999px;
+                        text-align: center;
+                        margin: 2rem auto;
+                      }
+                      
+                      @media (max-width: 768px) {
+                        .play-button {
+                          font-size: 1.5rem;
+                          padding: 0.75rem 1.5rem;
+                        }
+                        .header {
+                          flex-direction: column;
+                          align-items: center;
+                        }
+                        .header h1 {
+                          margin-bottom: 10px;
+                        }
+                        .header .flex {
+                          flex-direction: column;
+                          align-items: center;
+                        }
+                        .header .flex input {
+                          margin-bottom: 10px;
+                        }
+                      }
+                    
+          </style>
+          <script src="/scripts/neuro.js"></script>
+        </head>
+        <body class="container">
+          <div class="justify-center flex-1 p-6 space-y-6">
+            <br/>
+            <div class="header flex justify-between items-center">
+              <h1 class="text-2xl font-bold"><span class="text-yellow-400">NEUROPET</span></h1>
+              <div class="flex items-center space-x-4">
+                <input class="px-4 py-2 rounded-full bg-gray-700 text-white" placeholder="Search" type="text"/>
+                <div class="flex flex-row items-center space-x-4">
+                  <i class="fas fa-shopping-cart text-xl"></i>
+                  <i class="fas fa-bell text-xl"></i>
+                  <img class="w-10 h-10 rounded-full" alt="User Avatar" src="/images/avatar.png"/>
+                </div>
+              </div>
+            </div>
+            <div class="play-button button">Play Now</div>
+            <div class="card p-6 rounded-lg flex flex-col md:flex-row space-x-0 md:space-x-6">
+              <div class="flex-1">
+                <div class="flex items-center space-x-2 mb-4">
+                  <span class="highlight px-2 py-1 rounded-full text-sm">Popular</span>
+                  <i class="fas fa-gamepad"></i>
+                  <i class="fas fa-users"></i>
+                </div>
+                <h2 class="text-3xl font-bold">Neuropet Astro</h2>
+                <p class="mt-2">
+                  Neuropet is a single player space themed decentralized game for everyone! &#39; first first-person shooter game.
+                </p>
+                <div class="flex items-center space-x-4 mt-4">
+                  <div class="flex -space-x-2">
+                    <img class="w-8 h-8 rounded-full border-2 border-gray-700" alt="User Avatar" src="/images/avatar.png"/>
+                    <img class="w-8 h-8 rounded-full border-2 border-gray-700" alt="User Avatar" src="https://placehold.co/30x30"/>
+                    <img class="w-8 h-8 rounded-full border-2 border-gray-700" alt="User Avatar" src="https://placehold.co/30x30"/>
+                  </div>
+                  <div class="flex items-center space-x-2"><i class="fas fa-thumbs-up"></i><span>+53 Reviews</span></div>
+                </div>
+              </div>
+              <img class="w-full md:w-48 h-64 rounded-lg mt-4 md:mt-0" alt="Neuropet Astro" src="/images/neuropet.png"/>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold mb-4">New Games</h2>
+              <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
+                <div class="card p-4 rounded-lg w-full md:w-1/2">
+                  <img class="w-full h-40 rounded-lg mb-4" alt="Neuropet valorant" src="/images/valorant.png"/>
+                  <h3 class="text-lg font-bold">Neuropet Valorant</h3>
+                  <p class="mt-2">
+                    Is the sequel to neuropet astro 3: Encounter a charming adventure of saving space in a decentralized universe
+                  </p>
+                </div>
+                <div class="card p-4 rounded-lg w-full md:w-1/2">
+                  <img class="w-full h-40 rounded-lg mb-4" alt="Neuropet: spacewhale" src="/images/spacewhale.png"/>
+                  <h3 class="text-lg font-bold">Neuropet: spacewhale</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold mb-4">Statistics</h2>
+              <div class="card p-4 rounded-lg flex items-center space-x-4">
+                <img class="w-16 h-16 rounded-lg" alt="Neuropet 24 Image" src="/images/rocket.png"/>
+                <div class="flex-1"><h3 class="text-lg font-bold">Neuropet 24</h3><p class="text-sm">Space simulator</p></div>
+                <div class="text-right"><p class="text-sm">1 hour 24 min.</p><p class="text-sm">total played</p></div>
+                <button class="button px-4 py-2 rounded-full">Like</button>
+              </div>
+            </div>
+          </div>
+        </body>
+      </html>
+    </div>
+  </body>
+</html>
