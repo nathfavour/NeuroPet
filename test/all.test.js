@@ -52,9 +52,6 @@ describe("GameEngine", function () {
 
     // Since we can't directly access the battle result, let's check if the transaction was successful
     expect(receipt.status).to.equal(1); // 1 means success
-
-    // You might want to add more specific checks here based on what you find in the logs
-    // For example, if there's a BattleOutcome event, you could check its parameters
   });
 });
 

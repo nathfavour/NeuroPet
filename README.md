@@ -132,6 +132,8 @@ The test suite ensures the correctness and expected behavior of the core functio
 
 npx hardhat test
 
+Example test output:
+
 
   GameEngine
     ✔ should calculate character power correctly
@@ -155,7 +157,7 @@ npx hardhat test
 
   9 passing (2s)
 
-  # 5. License
+ # 5. License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 
