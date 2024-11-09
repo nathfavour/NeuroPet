@@ -24,46 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--/-->
     <style>
-      header {
-        display: flex;
-        justify-content: center;
-        padding: 1em;
-      }
-      header nav {
-        background-color: #01589B;
-        height: 3em;
-        border-radius: 10px;
-        overflow: clip;
-        display: flex;
-        justify-content: space-between;
-      }
-      header nav a {
-        color: white;
-        font-weight: 700;
-        text-decoration: none;
-        padding-left: 2em;
-        padding-right: 2em;
-        height: 100%;
-        display: flex;
-        align-items: center;
-      }
-      header nav a:hover {
-        background-color: #0005;
-      }
-      header nav div.active {
-        position: relative;
-      }
-      header nav div.active::before {
-        content: "";
-        display: block;
-        height: 2px;
-        border-radius: 1px;
-        position: absolute;
-        left: 20px;
-        bottom: 0.5em;
-        right: 20px;
-        background-color: white;
-      }
       ol {
         max-width: 500px;
       }
@@ -180,7 +140,7 @@
                 </div>
               </div>
             </div>
-            <div class="play-button button">Play Now</div>
+            <div class="play-button button"><a href="https://crossfiastroapp.vercel.app/">Play Now</a></div>
             <div class="card p-6 rounded-lg flex flex-col md:flex-row space-x-0 md:space-x-6">
               <div class="flex-1">
                 <div class="flex items-center space-x-2 mb-4">
